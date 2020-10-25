@@ -1,0 +1,9 @@
+<ng-container *ngIf="tree && tree.children && tree.children.length > 0">
+  <template-selector-item
+    #menu
+    [items]="tree.children"
+  ></template-selector-item>
+  <button mat-menu-item [matMenuTriggerFor]="menu.childMenu">
+    Choose a template
+  </button>
+</ng-container>
